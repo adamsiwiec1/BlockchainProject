@@ -140,15 +140,14 @@ class Blockchain(object):
     def hash(block):
         """
         Creates a SHA-256 hash of a Block
-        :param block: <dict> Block
-        :return: <str>
+        :param block: Block
         """
 
         # We must make sure that the Dictionary is Ordered, or we'll have inconsistent hashes
         block_string = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(block_string).hexdigest()
 
-    def proof_of_work(self, last_proof):
+    def proof_of_work(self, last_block):
         """
         Simple Proof of Work Algorithm
          - Find a number p' such that hash(pp') contains leading 4 zeros, where p is the previous p'
@@ -157,22 +156,26 @@ class Blockchain(object):
         :return: <int>
         """
 
+        last_proof = last_block['proof']
+        last_hash = self.hash(last_block)
+
         proof = 0
-        while self.valid_proof(last_proof, proof) is False:
+        while self.valid_proof(last_proof, proof, last_hash) is False:
             proof += 1
 
         return proof
 
     @staticmethod
-    def valid_proof(last_proof, proof):
+    def valid_proof(last_proof, proof, last_hash):
         """
         Validates the Proof: Does hash(last_proof, proof) contain 4 leading zeros?
         :param last_proof: <int> Previous proof
         :param proof: <int> Current Proof
         :return: <bool> True if correct, false if not.
+
         """
 
-        guess = f'{last_proof}{proof}'.encode()
+        guess = f'{last_proof}{proof}{last_hash}'.encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:4] == "0000"
 
@@ -191,7 +194,6 @@ blockchain = Blockchain()
 def mine():
     # We run the proof of work algorithm to get the next proof
     last_block = blockchain.last_block
-    last_proof = last_block['proof']
     proof = blockchain.proof_of_work(last_block)
 
     # We must receive a reward for finding the proof.
@@ -218,7 +220,7 @@ def mine():
 
 @app.route('/transactions/new', methods=['POST'])
 def new_transaction():
-    values = flask.request.get_json()
+    values = request.get_json()
 
     # Here we check that the required fields are in the POST'ed data
     required = ['sender', 'recipient', 'amount']
@@ -229,7 +231,6 @@ def new_transaction():
     index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'])
 
     response = {'message': f'Transaction Will be added to Block {index}'}
-
     return jsonify(response), 201
 
 
