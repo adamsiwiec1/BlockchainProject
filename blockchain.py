@@ -4,13 +4,13 @@ from textwrap import dedent
 from time import time
 from uuid import uuid4
 
-from flask import Flask, jsonify, request
+import flask
 
 
 class Blockchain(object):
-    def _init_(self):
-        self.chain = []
+    def __init__(self):
         self.current_transactions = []
+        self.chain = []
 
         # Create the genesis block
         self.new_block(previous_hash=1, proof=100)
@@ -31,13 +31,20 @@ class Blockchain(object):
             'previous_hash': previous_hash or self.hash(self.chain[-1]),
         }
 
-    def new_transction(self, sender, recipient, amount):
-        #  Adds a new transaction to the list of transactions pass
+        # Reset the current list of transactions
+        self.current_transactions = []
+
+        self.chain.append(block)
+        return block
+
+    def new_transaction(self, sender, recipient, amount):
         """
-        :param sender: <str>
-        :param recipient:
-        :param amount:
-        :return:
+        Creates a new transaction and moves to the next mined block
+
+        :param sender: <str> Address of the Sender
+        :param recipient: Address of the Recipient
+        :param amount: Amount
+        :return: The index of the Block that will hold this transaction
         """
         self.current_transactions.append({
             'sender': sender,
@@ -49,7 +56,6 @@ class Blockchain(object):
 
     @property
     def last_block(self):
-        # Returns the last Block in the chain pass
         return self.chain[-1]
 
     @staticmethod
@@ -62,7 +68,7 @@ class Blockchain(object):
 
         # We must make sure that the Dictionary is Ordered, or we'll have inconsistent hashes
         block_string = json.dumps(block, sort_keys=True).encode()
-        return hashlib.sha256(block_string).hexdisgest()
+        return hashlib.sha256(block_string).hexdigest()
 
     def proof_of_work(self, last_proof):
         """
@@ -94,7 +100,7 @@ class Blockchain(object):
 
 
 # Instantiate our Node
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 # Generate a globally unique address for this node
 node_identifier = str(uuid4()).replace('-', '')
@@ -102,16 +108,17 @@ node_identifier = str(uuid4()).replace('-', '')
 # Instantiate the Blockchain
 blockchain = Blockchain()
 
+
 @app.route('/mine', methods=['GET'])
 def mine():
     # We run the proof of work algorithm to get the next proof
     last_block = blockchain.last_block
     last_proof = last_block['proof']
-    proof = blockchain.proof_of_work(last_proof)
+    proof = blockchain.proof_of_work(last_block)
 
     # We must receive a reward for finding the proof.
     # The sender is "0" to signify that this node has mined a new coin.
-    blockchain.new_transction(
+    blockchain.new_transaction(
         sender="0",
         recipient=node_identifier,
         amount=1,
@@ -125,15 +132,15 @@ def mine():
         'message': "New Block Forged",
         'index': block['index'],
         'transactions': block['transactions'],
-        'proof': block[proof],
+        'proof': block['proof'],
         'previous_hash': block['previous_hash'],
     }
+    return flask.jsonify(response), 200
 
-    return jsonify(response), 200
 
 @app.route('/transactions/new', methods=['POST'])
 def new_transaction():
-    values = request.get.json()
+    values = flask.request.get.json()
 
     # Here we check that the required fields are in the POST'ed data
     required = ['sender', 'recipient', 'amount']
@@ -141,11 +148,12 @@ def new_transaction():
         return 'Missing values', 400
 
     # Create a new Transaction
-    index = blockchain.new_transction(values['sender'], values['recipient'], values['amount'])
+    index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'])
 
     response = {'message': f'Transaction Will be added to Block {index}'}
 
-    return jsonify(response), 201
+    return flask.jsonify(response), 201
+
 
 @app.route('/chain',methods=['GET'])
 def full_chain():
@@ -153,9 +161,9 @@ def full_chain():
         'chain': blockchain.chain,
         'length': len(blockchain.chain),
     }
-    return jsonify(response), 200
+    return flask.jsonify(response), 200
 
 
 # Runs the server on port 5000
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='127.0.0.1', port=5000)
