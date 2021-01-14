@@ -21,3 +21,10 @@ This is what a transaction will look like, this is what the user sends to the se
  "recipient": "someone else's address",
  "amount": 5
 }
+
+
+** Methods **
+
+valid_chain() is responsible for checking if a chain is valid by looping through each block and verifying both the hash and the proof.
+
+resolve_conflicts() is a method which loops through all our neighbouring nodes, downloads their chains and verifies them using the above method. If a valid chain is found, whose length is greater than ours, we replace ours.
