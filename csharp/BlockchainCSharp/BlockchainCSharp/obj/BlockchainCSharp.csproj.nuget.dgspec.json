@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Runtime.CompilerServices.VisualC": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "TinyWebServer.dll": {
               "target": "Package",
               "version": "[1.0.1, )"

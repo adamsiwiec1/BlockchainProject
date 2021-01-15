@@ -1,0 +1,25 @@
+﻿<Window x:Class="BlockChainApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlockChainApplication"
+        mc:Ignorable="d"
+        Title="Blockchain Project" Height="329" Width="724" >
+    <Grid Margin="0,0,0,-6">
+        <Label FontWeight="Bold" Content="Hello, thank you for choosing Adam coin. Please enter your transaction details below." HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" Height="27" Width="505"/>
+        
+        <Label Content="Sender:" Margin="100,95,560,200"/>
+        <Label Content="Recipient:" Margin="100,145,560,145"/>
+        <Label Content="Amount:" Margin="200,187,460,105"/>
+        <TextBox x:Name="tb_sender" Text="" TextWrapping="Wrap" Margin="170,100,100,200"/>
+        <TextBox x:Name="tb_recipient" Text="" TextWrapping="Wrap" Margin="170,150,100,150"/>
+        <TextBox x:Name="tb_amount" Text="" TextWrapping="Wrap" Margin="275,190,275,110"/>
+        <Button x:Name="btn_send" Content="Send" Margin="320,240,320,50" Click="btn_send_Click"/>
+
+
+        <Label x:Name="lbl_sucess" Content="Transaction complete! Here is your recipt:" Visibility="Hidden" Margin="20,230,460,64"/>
+        <Label x:Name="lbl_recipt" Content="(recipt)" Visibility="Hidden" Margin="20,260,460,34"/>
+
+    </Grid>
+</Window>

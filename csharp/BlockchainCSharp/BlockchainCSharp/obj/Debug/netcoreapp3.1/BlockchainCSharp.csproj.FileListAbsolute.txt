@@ -1,7 +1,6 @@
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.csprojAssemblyReference.cache
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.AssemblyInfoInputs.cache
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.AssemblyInfo.cs
-Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.csproj.CoreCompileInputs.cache
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\bin\Debug\netcoreapp3.1\BlockchainCSharp.exe
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.csproj.CopyComplete
@@ -30,3 +29,6 @@ Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\bi
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.dll
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.pdb
 Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.genruntimeconfig.cache
+Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\bin\Debug\netcoreapp3.1\BlockchainCSharp.dll.config
+Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+Z:\coding\Python Projects\Blockchain\csharp\BlockchainCSharp\BlockchainCSharp\obj\Debug\netcoreapp3.1\BlockchainCSharp.csproj.CoreCompileInputs.cache

@@ -14,7 +14,7 @@ namespace BlockChainDemo
 
         public override string ToString()
         {
-            return $"{Index} [{Timestamp.ToString("yyyy-MM-dd HH:mm:ss")}] Proof: {Proof} | PrevHash: {PreviousHash} | Trx: {Transactions.Count}";
+            return $"Index: {Index} \nTime:[{Timestamp.ToString("yyyy-MM-dd HH:mm:ss")}] \nProof: {Proof} \nPrevHash: {PreviousHash} \nTrxCount: {Transactions.Count}";
         }
     }
 }

@@ -6,6 +6,8 @@
         {
             var chain = new BlockChain();
             var server = new WebServer(chain);
+
+            
             System.Console.Read();
         }
     }
