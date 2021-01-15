@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Blockchain Project" Height="329" Width="724" >
     <Grid Margin="0,0,0,-6">
-        <Label FontWeight="Bold" Content="Hello, thank you for choosing Adam coin. Please enter your transaction details below." HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" Height="27" Width="505"/>
+        <Label x:Name="lbl_title" FontWeight="Bold" Content="Hello, thank you for choosing Adam coin. Please enter your transaction details below." HorizontalAlignment="Left" Margin="100,25,0,0" VerticalAlignment="Top" Height="27" Width="505"/>
         
         <Label Content="Sender:" Margin="100,95,560,200"/>
         <Label Content="Recipient:" Margin="100,145,560,145"/>
