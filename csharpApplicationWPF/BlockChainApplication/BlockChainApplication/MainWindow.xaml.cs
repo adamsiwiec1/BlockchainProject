@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,13 +77,18 @@ namespace BlockChainApplication
             var jsonString = await client.PostAsync($"http://{uri[0]}:{uri[1]}/transactions/new/", httpContent);
 
             var rqMsg = await jsonString.RequestMessage.Content.ReadAsStringAsync();
+            var rqMsgHeaders = " " + jsonString.RequestMessage.Properties + " "  + $"{jsonString.RequestMessage.CreateResponse(200)}";
             var result = jsonString.Headers;
             var result2 = jsonString.Content.ReadAsStringAsync().Result;
             var result3 = await jsonString.Content.ReadAsStringAsync();
 
+            // TRYING TO PASS MY OWN HTTP RESPONSE SINCE I CANNOT get the other httpresponse from this post - caps so I dont forget
+            HttpRequestMessage htttpRequest = new HttpRequestMessage();
+            HttpResponseMessage httpResponse = htttpRequest.CreateResponse(HttpStatusCode.OK);
+            sm.WriteLine("\n\nHTTTP RESPONSE:" + httpResponse); /*StatusCode + "\n\n A: \n\n" + httpResponse.RequestMessage + "\n\n B: \n\n" + httpResponse.Content + "\n\n C: \n\n" + httpResponse.ReasonPhrase + "\n\n D: \n\n" + httpResponse);*/
 
             var rsMsg = "sucess? " + jsonString.Content.ReadAsStringAsync().IsCompletedSuccessfully + " \n\n" + result + "\n\n" + result2 + "\n\n" + result3;
-            sm.Write("\nRequest Message:\n" + rqMsg + "\n\n\nMaybe?\n\n" + rsMsg + "\n\n\nProbably not??\n\n" + jsonString.Headers + "\n\n No way" + jsonString.Content.ReadAsStringAsync().Status);
+            sm.Write("\nRequest Message:\n" + rqMsg + "\n\n\nMaybe?\n\n" + rsMsg + "\n\n\nProbably not??\n\n" + jsonString.Headers + "\n\n\nReq Mesg Headers:\n\n" +rqMsgHeaders + "\n\n No way" + jsonString.Content.ReadAsStringAsync().Status);
 
             //var msg = await jsonString;
             sm.WriteLine("\n\nIF THIS WORKS ILL BE MAD:" + jsonString.Content + jsonString.Content.Headers + "\n\nstatus codes: response? " + jsonString.Content.IsHttpResponseMessageContent() + " Ok?? " + jsonString.StatusCode);
