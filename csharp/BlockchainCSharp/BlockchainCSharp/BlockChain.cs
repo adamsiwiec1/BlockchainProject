@@ -20,20 +20,17 @@ namespace BlockChainDemo
         public string NodeId { get; private set; }
 
         //ctor
-        public BlockChain()
-        {
+        public BlockChain(){
             NodeId = Guid.NewGuid().ToString().Replace("-", "");
             CreateNewBlock(proof: 100, previousHash: "1"); //genesis block
         }
 
         //private functionality
-        private void RegisterNode(string address)
-        {
+        private void RegisterNode(string address){
             _nodes.Add(new Node { Address = new Uri(address) });
         }
 
-        private bool IsValidChain(List<Block> chain)
-        {
+        private bool IsValidChain(List<Block> chain){
             Block block = null;
             Block lastBlock = chain.First();
             int currentIndex = 1;
@@ -59,8 +56,7 @@ namespace BlockChainDemo
             return true;
         }
 
-        private bool ResolveConflicts()
-        {
+        private bool ResolveConflicts(){
             List<Block> newChain = null;
             int maxLength = _chain.Count;
 

@@ -189,6 +189,7 @@ node_identifier = str(uuid4()).replace('-', '')
 # Instantiate the Blockchain
 blockchain = Blockchain()
 
+# @app.route is used to signify the methods we will call given a request to that URL and GET/POST
 
 @app.route('/mine', methods=['GET'])
 def mine():

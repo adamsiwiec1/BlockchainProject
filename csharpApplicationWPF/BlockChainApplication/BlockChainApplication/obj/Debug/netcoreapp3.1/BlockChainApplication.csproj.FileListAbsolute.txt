@@ -25,5 +25,5 @@ Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\
 Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\BlockChainApplication\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\BlockChainApplication\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
 Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\BlockChainApplication\bin\Debug\netcoreapp3.1\TinyWebServer.dll
-Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\BlockChainApplication\obj\Debug\netcoreapp3.1\BlockChainApplication.csproj.CoreCompileInputs.cache
 Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\BlockChainApplication\obj\Debug\netcoreapp3.1\BlockChainApplication.csproj.CopyComplete
+Z:\coding\Python Projects\Blockchain\csharpApplicationWPF\BlockChainApplication\BlockChainApplication\obj\Debug\netcoreapp3.1\BlockChainApplication.csproj.CoreCompileInputs.cache

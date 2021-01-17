@@ -8,4 +8,5 @@ namespace BlockChainApplication.BlockChain
     {
         public Uri Address { get; set; }
     }
+
 }

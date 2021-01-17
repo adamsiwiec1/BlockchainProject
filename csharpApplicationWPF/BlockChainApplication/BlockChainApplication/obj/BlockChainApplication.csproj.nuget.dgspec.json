@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "System.IO": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "TinyWebServer.dll": {
               "target": "Package",
               "version": "[1.0.1, )"

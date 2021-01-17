@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -14,11 +16,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BlockChainApplication.BlockChain;
+using BlockChainApplication.Testing;
 using Newtonsoft.Json;
 
 namespace BlockChainApplication
 {
-
     //Testing transactions
     //Step 1: www.localhost:port/mine
     //Step 2: Repeat step 1 running a second window of this application and use a different port. Mine that port.
@@ -27,9 +29,6 @@ namespace BlockChainApplication
     //addr1 = 518ffdc4cc1c424d945a795655b185f8
     //addr2 = 12756ca45cbc48b587af1d7fe0589f39
 
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -37,8 +36,19 @@ namespace BlockChainApplication
             InitializeComponent();
             InitializeChain();
         }
+        //local server host and port used in PostAsync method
 
+        public string[] GetURI()
+        {
+            string[] uri = { "host", "port"};
+            var settings = ConfigurationManager.AppSettings;
+            string host = settings["host"]?.Length > 1 ? settings["host"] : "localhost";
+            uri[0] = host;
+            string port = settings["port"]?.Length > 1 ? settings["port"] : "12345";
+            uri[1] = port;
 
+            return uri;
+        }
         private void InitializeChain()
         {
             var chain = new BlockChain.BlockChain();
@@ -56,13 +66,19 @@ namespace BlockChainApplication
 
             HttpClient client = new HttpClient();
 
+            string[] uri = GetURI();
+
             //convert to JSON and Post transaction
-            string post = $"   'sender': '{sendr}\n'  'recipient': '{recipient}\n'  'amount': '{amount}\n'";
+            string post = $" {{   \"sender\": \"{sendr}\",  \"recipient\": \"{recipient}\",  \"amount\": \"{amount}\" }}";
             string json = JsonConvert.SerializeObject(post, Formatting.Indented);
             var httpContent = new StringContent(json);
             //set title label to reply for testing
-            lbl_title.Content = client.PostAsync("0.0.0.0", httpContent);
-           
+
+            Test.sm.Write("Http Content: \n \n \n" + httpContent + "\n \n \n JSON:" + json);
+            Test.sm.Close();
+
+            lbl_title.Content = client.PostAsync($"http://{uri[0]}:{uri[1]}/transactions/new/", httpContent);
+
 
         }
     }

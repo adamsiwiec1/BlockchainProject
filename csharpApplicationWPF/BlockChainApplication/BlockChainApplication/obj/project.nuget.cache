@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WKnNaEy1dTHffrRc/01esQtr3zSR4I9VOvw5tmtn9XnzR+WB+h0YbNlH8NEMDYwHoZU1ZbEngd4aPXLj/dxZJQ==",
+  "dgSpecHash": "l4mS5aGYTRKcmjHfyAEB8r+2w6MzKgd6yor5REtzONw85tgcHHeig+V6NRK4uxJpsPebRxkAFqbFhou3NhwITQ==",
   "success": true,
   "projectFilePath": "Z:\\coding\\Python Projects\\Blockchain\\csharpApplicationWPF\\BlockChainApplication\\BlockChainApplication\\BlockChainApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adams\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\adams\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\npoi\\2.5.2\\npoi.2.5.2.nupkg.sha512",
@@ -12,10 +13,14 @@
     "C:\\Users\\adams\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\adams\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\adams\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
+    "C:\\Users\\adams\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\adams\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\adams\\.nuget\\packages\\tinywebserver.dll\\1.0.1\\tinywebserver.dll.1.0.1.nupkg.sha512"
   ],
   "logs": [
