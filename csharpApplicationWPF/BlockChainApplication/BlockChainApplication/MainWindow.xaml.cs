@@ -84,7 +84,7 @@ namespace BlockChainApplication
 
             // TRYING TO PASS MY OWN HTTP RESPONSE SINCE I CANNOT get the other httpresponse from this post - caps so I dont forget
             HttpRequestMessage htttpRequest = new HttpRequestMessage();
-            HttpResponseMessage httpResponse = htttpRequest.CreateResponse(HttpStatusCode.OK);
+            HttpResponseMessage httpResponse = htttpRequest.CreateResponse(HttpStatusCode.OK, jsonString);
             sm.WriteLine("\n\nHTTTP RESPONSE:" + httpResponse); /*StatusCode + "\n\n A: \n\n" + httpResponse.RequestMessage + "\n\n B: \n\n" + httpResponse.Content + "\n\n C: \n\n" + httpResponse.ReasonPhrase + "\n\n D: \n\n" + httpResponse);*/
 
             var rsMsg = "sucess? " + jsonString.Content.ReadAsStringAsync().IsCompletedSuccessfully + " \n\n" + result + "\n\n" + result2 + "\n\n" + result3;
