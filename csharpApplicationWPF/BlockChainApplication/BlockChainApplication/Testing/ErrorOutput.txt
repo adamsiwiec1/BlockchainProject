@@ -1,12 +1,45 @@
-IF THIS WORKS ILL BE MAD:
 
+Request Message:
+{
+  "sender": "ggg",
+  "recipient": "jii",
+  "amount": "1"
+}
+
+
+Maybe?
+
+sucess? True 
+
+Server: Microsoft-HTTPAPI/2.0
+Date: Sun, 17 Jan 2021 09:28:24 GMT
+
+
+
+
+
+
+
+Probably not??
+
+Server: Microsoft-HTTPAPI/2.0
+Date: Sun, 17 Jan 2021 09:28:24 GMT
+
+
+ No wayRanToCompletion
+
+IF THIS WORKS ILL BE MAD:System.Net.Http.HttpConnectionResponseContentContent-Length: 0
+
+
+status codes: response? False Ok?? OK
+Content value true?:False
  
  
  JSON:
 {
-  "sender": "61b4184da711475389cac038840df81e",
-  "recipient": "ccd6bd6c3c0c4e0ea47fe78f7bfbdcf6",
-  "amount": "10"
+  "sender": "ggg",
+  "recipient": "jii",
+  "amount": "1"
 }
 
  MY Response:System.IO.StreamWriter

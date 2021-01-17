@@ -14,7 +14,6 @@ using BlockChainApplication.Testing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 
 namespace BlockChainApplication
 {
@@ -67,20 +66,33 @@ namespace BlockChainApplication
         //}
 
         [HttpPost]
-        public async static Task<StreamWriter>PostTransaction(string[] uri, StringContent httpContent, StreamWriter sm)
+        public async static Task<StreamWriter> PostTransaction(string[] uri, StringContent httpContent, StreamWriter sm)
         {
             var client = new HttpClient();
 
-            await client.PostAsync($"http://{uri[0]}:{uri[1]}/transactions/new/", httpContent);
+            //var response = await client.PostAsync($"http://{uri[0]}:{uri[1]}/transactions/new/", httpContent);
+            
 
-            var jsonString = client.GetStringAsync($"http://{uri[0]}:{uri[1]}/transactions/new/");
+            var jsonString = await client.PostAsync($"http://{uri[0]}:{uri[1]}/transactions/new/", httpContent);
 
-            var msg = await jsonString;
-            sm.WriteLine("IF THIS WORKS ILL BE MAD:" + msg);
+            var rqMsg = await jsonString.RequestMessage.Content.ReadAsStringAsync();
+            var result = jsonString.Headers;
+            var result2 = jsonString.Content.ReadAsStringAsync().Result;
+            var result3 = await jsonString.Content.ReadAsStringAsync();
 
 
+            var rsMsg = "sucess? " + jsonString.Content.ReadAsStringAsync().IsCompletedSuccessfully + " \n\n" + result + "\n\n" + result2 + "\n\n" + result3;
+            sm.Write("\nRequest Message:\n" + rqMsg + "\n\n\nMaybe?\n\n" + rsMsg + "\n\n\nProbably not??\n\n" + jsonString.Headers + "\n\n No way" + jsonString.Content.ReadAsStringAsync().Status);
 
+            //var msg = await jsonString;
+            sm.WriteLine("\n\nIF THIS WORKS ILL BE MAD:" + jsonString.Content + jsonString.Content.Headers + "\n\nstatus codes: response? " + jsonString.Content.IsHttpResponseMessageContent() + " Ok?? " + jsonString.StatusCode);
 
+            var content = jsonString.Content;
+
+            bool retrieval = jsonString.TryGetContentValue(out content);
+            sm.Write("Content value true?:" + retrieval);
+
+            //sm.WriteLine("Http content as async:\n\n" +  response.Content.ReadAsStringAsync().Result);
 
 
 
