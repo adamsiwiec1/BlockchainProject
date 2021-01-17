@@ -3,21 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9dccd5d4-62c1-484b-a4c4-ea9630c197fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharp/BlockchainCSharp/.vs/BlockchainCSharp/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/csharp/BlockchainCSharp/.vs/BlockchainCSharp/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharp/BlockchainCSharp/BlockchainCSharp/BlockChain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/csharp/BlockchainCSharp/BlockchainCSharp/BlockChain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/.vs/BlockChainApplication/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/.vs/BlockChainApplication/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/.vs/BlockChainApplication/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/.vs/BlockChainApplication/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/Testing/ErrorOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/Testing/ErrorOutput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/bin/Debug/netcoreapp3.1/BlockChainApplication.dll" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/bin/Debug/netcoreapp3.1/BlockChainApplication.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/bin/Debug/netcoreapp3.1/BlockChainApplication.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/bin/Debug/netcoreapp3.1/BlockChainApplication.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.dll" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/BlockChainApplication.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/csharpApplicationWPF/BlockChainApplication/BlockChainApplication/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +111,7 @@
       <workItem from="1610666761973" duration="3420000" />
       <workItem from="1610671981255" duration="5454000" />
       <workItem from="1610742099098" duration="53000" />
-      <workItem from="1610836130821" duration="3921000" />
+      <workItem from="1610836130821" duration="4761000" />
     </task>
     <task id="LOCAL-00001" summary="finished project essentials - time to put my own twist on the code and create a pretty desktop application for trading">
       <created>1610592027608</created>
@@ -183,7 +176,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/blockchain_py$blockchain.coverage" NAME="blockchain Coverage Results" MODIFIED="1610843043171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/blockchain_py$blockchain.coverage" NAME="blockchain Coverage Results" MODIFIED="1610844374613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Blockchain$blockchain.coverage" NAME="blockchain Coverage Results" MODIFIED="1610614420198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Blockchain$main.coverage" NAME="main Coverage Results" MODIFIED="1610598442988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

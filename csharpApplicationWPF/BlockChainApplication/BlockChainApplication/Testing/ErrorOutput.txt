@@ -1,1 +1,12 @@
-" {   \"sender\": \"61b4184da711475389cac038840df81e\",  \"recipient\": \"3835a7a71c6946de96716423c7230d01\",  \"amount\": \"10\" }"
+IF THIS WORKS ILL BE MAD:
+
+ 
+ 
+ JSON:
+{
+  "sender": "61b4184da711475389cac038840df81e",
+  "recipient": "ccd6bd6c3c0c4e0ea47fe78f7bfbdcf6",
+  "amount": "10"
+}
+
+ MY Response:System.IO.StreamWriter
